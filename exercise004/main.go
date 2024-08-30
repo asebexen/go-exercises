@@ -15,9 +15,9 @@ func createIntArray(s string) ([]int, error) {
 	result := make([]int, len(tokens))
 	for i, ele := range tokens {
 		var err error
-		result[i], err = strconv.Atoi(string(strings.Trim(ele, " ")))
+		result[i], err = strconv.Atoi(string(strings.TrimSpace(ele)))
 		if err != nil {
-			err := fmt.Errorf("error parsing arg %s: element must be an integer", strings.Trim(ele, " "))
+			err := fmt.Errorf("error parsing arg %s: element must be an integer", strings.TrimSpace(ele))
 			return []int{}, err
 		}
 	}
