@@ -22,7 +22,7 @@ func myFunc(n int) (int, error) {
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Printf("Please supply a number. Example: ./out 8\n")
+		fmt.Printf("Please provide a number.")
 		return
 	}
 
